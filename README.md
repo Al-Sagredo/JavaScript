@@ -1,4 +1,5 @@
-Repositorio vacío, proximamente se subirá el contenido
+Desafío 1 listo
+resto de desafíos faltantes
 
 # JavaScript
 Ejercicios y proyectos de JavaScript 
