@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <h2>
+        Paleta de colores
+      </h2>
+      <div style="display: flex;">
+        <div style="display: flex;flex-direction: column;">
+          <button id="btn-1" style="background-color: #e53e3e; width:100px;height: 100px" type="button">
+          </button>
+          <button id="btn-2" style="background-color: #dd6b20; width:100px;height: 100px" type="button">
+          </button>
+          <button id="btn-3" style="background-color: #faf089; width:100px;height: 100px" type="button">
+          </button>
+          <button id="btn-4" style="background-color: #48bb78; width:100px;height: 100px" type="button">
+          </button>
+          <button id="btn-5" style="background-color: #81e6d9; width:100px;height: 100px" type="button">
+          </button>
+          <button id="btn-6" style="background-color: #d53f8c; width:100px;height: 100px" type="button">
+          </button>
+        </div>
+        <div style="width: 500px;height: 600px">
+          <div id="caja" style="border:1px solid black;width: 100%;height: 100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //captura el objeto boton
+    let boton1 = document.getElementById("btn-1");
+    //captura el color del boton
+    let colorBoton1 = boton1.style.backgroundColor;
+    //le asigna el color del boton a la caja grande
+    boton1.addEventListener("click", function() {
+      document.getElementById("caja").style.backgroundColor = colorBoton1;
+    });
+
+    let boton2 = document.getElementById("btn-2");
+    let colorBoton2 = boton2.style.backgroundColor;
+    boton2.addEventListener("click", function() {
+      document.getElementById("caja").style.backgroundColor = colorBoton2;
+    });
+
+    let boton3 = document.getElementById("btn-3");
+    let colorBoton3 = boton3.style.backgroundColor;
+    boton3.addEventListener("click", function() {
+      document.getElementById("caja").style.backgroundColor = colorBoton3;
+    });
+
+    let boton4 = document.getElementById("btn-4");
+    let colorBoton4 = boton4.style.backgroundColor;
+    boton4.addEventListener("click", function() {
+      document.getElementById("caja").style.backgroundColor = colorBoton4;
+    });
+
+    let boton5 = document.getElementById("btn-5");
+    let colorBoton5 = boton5.style.backgroundColor;
+    boton5.addEventListener("click", function() {
+      document.getElementById("caja").style.backgroundColor = colorBoton5;
+    });
+
+    let boton6 = document.getElementById("btn-6");
+    let colorBoton6 = boton6.style.backgroundColor;
+    boton6.addEventListener("click", function() {
+      document.getElementById("caja").style.backgroundColor = colorBoton6;
+    });
+  </script>
+</body>
+
+</html>

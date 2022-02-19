@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <h2>
+        Resultado: <span class="resultado"></span>
+      </h2>
+      <div>
+        <div>
+          <div>
+            <label for="">Valor 1</label>
+            <input id="valor1" type="text">
+          </div>
+          <div>
+            <label for="">Valor 2</label>
+            <input id="valor2" type="text">
+          </div>
+          <div style="display: flex">
+            <button id="btn-sumar" type="button">
+              Sumar
+            </button>
+            <button id="btn-restar" type="button">
+              Restar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //captura los botones
+    let botonSuma = document.getElementById("btn-sumar");
+    let botonResta = document.getElementById("btn-restar");
+    //agrega eventos a cada boton
+    botonSuma.addEventListener("click", function() {
+      limpiar();
+      //captura los valores ingresados
+      let numero1 = document.getElementById("valor1").value;
+      let numero2 = document.getElementById("valor2").value;
+      //valida que sean numeros
+      let numerosValidos = validar(numero1, numero2);
+      if (numerosValidos) {
+        let resultado = sumarNumeros(numero1, numero2);
+        document.querySelector(".resultado").innerHTML = resultado; //muestra el resultado de la suma en la pagina
+      } else {
+        alert("solo puedes ingresar numeros");
+      }
+    });
+
+    botonResta.addEventListener("click", function() {
+      limpiar();
+      let numero1 = document.getElementById("valor1").value;
+      let numero2 = document.getElementById("valor2").value;
+      let numerosValidos = validar(numero1, numero2);
+      if (numerosValidos) {
+        let resultado = restarNumeros(numero1, numero2);
+        if (resultado < 0) {
+          resultado = 0;
+        }
+        document.querySelector(".resultado").innerHTML = resultado;
+      } else {
+        alert("solo puedes ingresar numeros");
+      }
+    });
+
+    function validar(numero1, numero2) {
+      let patron = /[^0-9]/;
+      if (patron.test(numero1) || patron.test(numero2)) {
+        return false;
+      }
+      return true;
+    }
+
+    function sumarNumeros(numero1, numero2) {
+      return parseInt(numero1) + parseInt(numero2);
+    }
+
+    function restarNumeros(numero1, numero2) {
+      return parseInt(numero1) - parseInt(numero2);
+    }
+
+    function limpiar() {
+      document.querySelector(".resultado").innerHTML = "";
+    }
+  </script>
+</body>
+
+</html>
