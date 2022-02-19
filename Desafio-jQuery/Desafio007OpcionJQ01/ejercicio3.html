@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+
+<!-- Codigo insertado y ver los id correspondientes  -->
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#outer").mouseover(function () {
+                
+                $('ul li:even').css({ "border": "10px solid red" });
+                $('ul li:odd').css({ "border": "1px solid green" });
+            });
+            $("#outer").mouseout(function () {
+                $('ul li:even').css({ "border": "1px solid green" });
+                $('ul li:odd').css({ "border": "10px solid red" });
+            });
+
+        });
+
+
+    </script>
+<!-- FIN    Codigo insertado y ver los id correspondientes  -->
+</head>
+
+<body>
+    <div class="flex justify-center items-center w-full h-screen bg-gray-400">
+        <div class="w-1/2 shadow-md rounded mx-2">
+
+            <div id="outer"
+                class="flex justify-center items-center w-full h-16 border border-gray-700 bg-red-400 text-white font-bold text-xl">
+                <span>Pasa sobre mí</span>
+            </div>
+
+        </div>
+        <div class="w-1/2 shadow-md rounded mx-2">
+            <div
+                class="flex justify-center items-center w-full h-auto border border-gray-700 text-white font-bold text-xl">
+                <ul class="w-full">
+                    <li class="border border-black text-center border-dotted p-4">Elemento 1</li>
+                    <li class="border border-black text-center border-dotted p-4">Elemento 2</li>
+                    <li class="border border-black text-center border-dotted p-4">Elemento 3</li>
+                    <li class="border border-black text-center border-dotted p-4">Elemento 4</li>
+                    <li class="border border-black text-center border-dotted p-4">Elemento 5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

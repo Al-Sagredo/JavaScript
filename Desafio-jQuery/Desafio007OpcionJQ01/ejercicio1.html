@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+     
+
+        
+<!-- Codigo insertado y ver los id correspondientes  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $("#klik").click(function(){
+        
+        if ($("#cambia").width() == 100) {
+            $("#cambia").css("background-color", "magenta");
+            $("#cambia").width(150)
+            $("#cambia").height(150)
+        }
+        else {
+            $("#cambia").css("background-color", "orange");
+            $("#cambia").width(100)
+            $("#cambia").height(100) 
+        }
+      });
+
+      $("#cambia").click(function(){
+        if ($("#klik").width() == 100) {
+            $("#klik").css("background-color", "brown");
+            $("#klik").width(150)
+            $("#klik").height(150)
+        }
+        else {
+            $("#klik").css("background-color", "beige");
+            $("#klik").width(100)
+            $("#klik").height(100) 
+        }
+        
+      });
+
+    });
+    </script>
+    
+<!-- FIN Codigo insertado y ver los id correspondientes  -->
+
+    
+</head>
+
+<body>
+    <div>
+        <div>
+            <div id="klik" style="background-color:red;border: 1px solid gray;margin:10px;padding: 10px">
+                <span >haz click aqui o en mi hermano!!! Cuantas veces quieras !!!!</span>
+            </div>
+            <div id="cambia" style="background-color:white;border: 1px solid gray;margin:10px;padding: 10px">
+                <span>haz click aqui o en mi hermano!!!  Cuantas veces quieras !!!!</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

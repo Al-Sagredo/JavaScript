@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <div style="background-color:red;border: 1px solid gray;margin:10px;padding: 10px">
+        <span>haz click!!!</span>
+      </div>
+      <div style="background-color:white;border: 1px solid gray;margin:10px;padding: 10px">
+        <span>Cambiame</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    /*1. Al hacer click sobre la caja que dice "haz click" , aumenta el tamaño y el color de la
+  caja que dice "cambiame" (sólo utiliza jQuery). Siente la libertad de agregar las
+  clases o ids que sean necesarios (no modificar estructura html entregada).*/
+    $(document).ready(function() {
+      $("div div div:first-child").on("click", function() {
+        var $cuadrado = $("div div div:nth-child(2)");
+        $cuadrado
+          .css({
+            height: "300px",
+            backgroundColor: "#7FFF00",
+          });
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
