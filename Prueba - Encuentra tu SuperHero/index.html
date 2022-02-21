@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Encuentra tu superheroe</title>
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- Image and text -->
+  <nav class="navbar navbar-dark bg-dark">
+
+
+    <a style="margin-left:1rem" class="navbar-brand" href="#">
+      <img src="assets/img/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+      SuperHero
+    </a>
+
+  </nav>
+
+
+  <header>
+    <!--imagen y titulo-->
+
+    <div class="text-center">
+      <img class="w-25 mt-3 mb-4" src="assets/img/sh1.jpg" alt="superhero">
+    </div>
+    <h2 class="w-50 mx-auto">Encuentra tu SuperHero</h2>
+
+  </header>
+
+  <section>
+    <!--formulario para ingresar busqueda-->
+    <form class="w-50 m-auto">
+
+      <div class="mt-2 mb-1">
+        <label>Ingresa el número del SuperHero a buscar</label>
+      </div>
+      <div>
+        <input class="form-control">
+        <p class="errorNumeros" style="color:red;font-style: italic;"></p>
+      </div>
+
+      <button class="btn btn-primary mb-5">Buscar</button>
+    </form>
+  </section>
+
+  <section class=pb-5>
+    <!--section de resultado de busqueda-->
+
+    <div class="row container mx-auto" >
+      <div class="card col-12 col-sm-6 flex-row flex-wrap"  id="heroCard">
+
+
+      </div>
+      <div class="col-12 col-sm-6" width=100% style="height:300px;" id="chartContainer">
+      </div>
+    </div>
+
+
+  </section>
+  <!--style="width: 18rem;" EL QUE HACE EL CAMBIO ES PONERLE CARD AL HEROECARD-->
+  <!--
+<div class="card flex-row"><img class="card-img-left example-card-img-responsive" src="/postboot/assets/img/thumbnail.jpg"/>
+  <div class="card-body">
+    <h4 class="card-title h5 h4-sm">Left image</h4>
+    <p class="card-text">Example text</p>
+  </div>
+</div>-->
+
+
+
+
+
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!--canvasJS-->
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <!--hoja JS personal-->
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

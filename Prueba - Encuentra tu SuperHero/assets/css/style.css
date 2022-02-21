@@ -1,0 +1,15 @@
+
+
+#img-hero{
+  margin: 0 auto;
+  max-height:200px;
+}
+
+#texto{
+  max-height:300px;
+  overflow:scroll;
+}
+
+li{
+  font-size:0.8em;
+}
