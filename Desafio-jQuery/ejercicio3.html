@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flex justify-center items-center w-full h-screen bg-gray-400">
+    <div class="w-1/2 shadow-md rounded mx-2">
+      <div class="flex justify-center items-center w-full h-16 border border-gray-700 bg-red-400 text-white font-bold text-xl">
+        <span>Pasa sobre mí</span>
+      </div>
+    </div>
+    <div class="w-1/2 shadow-md rounded mx-2">
+      <div class="flex justify-center items-center w-full h-auto border border-gray-700 text-white font-bold text-xl">
+        <ul class="w-full">
+          <li class="border border-black text-center border-dotted p-4">Elemento 1</li>
+          <li class="border border-black text-center border-dotted p-4">Elemento 2</li>
+          <li class="border border-black text-center border-dotted p-4">Elemento 3</li>
+          <li class="border border-black text-center border-dotted p-4">Elemento 4</li>
+          <li class="border border-black text-center border-dotted p-4">Elemento 5</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    /*Dar un estilo a los elementos pares e impares de la lista al pasar el mouse sobre la
+caja roja y que vuelva a la normalidad cuando el mouse deje la caja (hint:
+mouseover(), mouseleave())*/
+$(document).ready(function(){
+  $(".h-16").on({
+    mouseover:function(){
+      $('ul li:odd').css('background-color','#B8860B');
+      $('ul li:even').css('background-color','#556B2F');
+    },
+    mouseleave:function(){
+      $('ul li:odd').css('background-color','rgba(203,213,224)');
+      $('ul li:even').css('background-color', "rgba(203,213,224)");
+    }
+  })
+})
+
+  </script>
+</body>
+
+</html>
